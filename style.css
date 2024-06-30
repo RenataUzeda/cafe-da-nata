@@ -1,7 +1,7 @@
 :root {
   --main-color: #d3ad7f;
   --black: #13131a;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --bg: #010103;
   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
   font-size: 10px;
@@ -25,7 +25,7 @@ body {
 section {
   padding: 3rem 2rem;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .header {
@@ -35,6 +35,7 @@ section {
   right: 0;
   z-index: 99;
   border-bottom: var(--border);
+  background-color: var(--bg);
 }
 
 .header section {
@@ -49,22 +50,111 @@ section {
   margin: 0 1rem;
   font-size: 1.8rem;
   color: var(--white);
-
 }
 
-.navbar a:hover{
-    color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
-    padding-bottom: 0.5rem;
-    font-size: 2rem;
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
-.icons img{
-    margin: 1rem;
-    cursor: pointer;
+.icons img {
+  margin: 1rem;
+  cursor: pointer;
 }
 
 .icons img:hover {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.btn {
+  background: var(--main-color);
+  color: var(--white);
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  letter-spacing: 0.1rem;
+}
+
+.home-container {
+  background: url("./img/cafe-home.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.home-container section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.content {
+  max-width: 60rem;
+}
+
+.content h3 {
+  color: var(--white);
+  font-size: 6rem;
+}
+
+.content p {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.title {
+  font-size: 4rem;
+  color: var(--main-color);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.title span {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  gap: 1.5rem;
+}
+
+.about .row .content {
+  padding: 2rem;
+}
+
+.about .row .content h3 {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.about .row .content p {
+  font-size: 1.6rem;
+  color: var(--white);
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.menu .box-container .box {
+  text-align: center;
+  border: var(--border);
+  padding: 5rem;
 }
