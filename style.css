@@ -21,6 +21,8 @@
 
 body {
   background: var(--bg);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 section {
@@ -75,25 +77,25 @@ section {
   color: var(--white);
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   cursor: pointer;
   display: inline-block;
+  border-radius: 3px;
 }
 
 .btn:hover {
   letter-spacing: 0.1rem;
 }
 
-.home-container {
+.home {
   background: url("./img/cafe-home.jpg");
   background-position: center;
   background-size: cover;
-}
-
-.home-container-section {
   display: flex;
   align-items: center;
+  max-width: 100vw;
   min-height: 100vh;
+  padding: 2rem 7rem;
 }
 
 .content {
@@ -110,7 +112,7 @@ section {
   font-size: 2rem;
   font-weight: 100;
   line-height: 1.8;
-  padding: 1rem 0;
+  padding: 1rem 1rem 1rem 0;
 }
 
 .title {
@@ -118,58 +120,76 @@ section {
   color: var(--main-color);
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .title span {
+  font-size: 4rem;
   color: var(--white);
   text-transform: uppercase;
 }
 
-.about .row {
+.about .row-about {
   display: flex;
   align-items: center;
   background-color: var(--black);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.about .row .content {
-  padding: 2rem;
-}
-
-.about .row .content h3 {
-  font-size: 3rem;
+.row-about h3 {
+  font-size: 3vw;
   color: var(--white);
+  padding-bottom: 1rem;
 }
 
-.about .row .content p {
-  font-size: 1.6rem;
+.about-img {
+  flex: 0 0 55%; 
+  max-width: 55%;
+}
+
+.about-img img {
+  width: 100%; 
+  height: 100%;
+}
+
+.row-about p {
+  font-size: 1.3vw;
   color: var(--white);
-  padding: 1rem 0;
+  font-weight: 100;
   line-height: 1.8;
+  width: 100%;
+  height: 100%;
 }
 
-.box-container {
+.box-container-menu, .box-container-review {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem;
 }
 
-.menu .box-container .box {
+.box-menu {
   text-align: center;
   border: var(--border);
   padding: 5rem;
   cursor: pointer;
 }
 
-.box img {
+.box-menu img {
   height: 10rem;
 }
 
-.box h3 {
+.box-menu h3 {
   color: var(--white);
   font-size: 2rem;
   padding: 1rem 0;
+}
+
+.box-menu:hover {
+  background-color: var(--white);
+}
+
+.box-menu:hover > * {
+  color: var(--black);
 }
 
 .price {
@@ -182,14 +202,6 @@ section {
   font-size: 1.5rem;
   text-decoration: line-through;
   font-weight: lighter;
-}
-
-.menu .box-container .box:hover {
-  background-color: var(--white);
-}
-
-.menu .box-container .box:hover > * {
-  color: var(--black);
 }
 
 .box-review {
@@ -247,69 +259,3 @@ section {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .home-container-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .content h3 {
-    font-size: 3rem;
-  }
-
-  .content p {
-    font-size: 1.5rem;
-  }
-
-  .navbar a {
-    font-size: 1.5rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about .row .content {
-    padding: 1rem;
-  }
-
-  .box-container {
-    grid-template-columns: 1fr;
-  }
-
-  .footer .share img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .content h3 {
-    font-size: 2.5rem;
-  }
-
-  .content p {
-    font-size: 1.3rem;
-  }
-
-  .btn {
-    padding: 0.8rem 2rem;
-    font-size: 1.5rem;
-  }
-
-  .navbar a {
-    font-size: 1.2rem;
-  }
-
-  .icons img {
-    width: 25px;
-    height: 25px;
-  }
-}
