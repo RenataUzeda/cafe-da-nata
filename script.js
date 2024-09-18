@@ -6,7 +6,12 @@ document.querySelectorAll(".navbar a").forEach((link) => {
 
     const targetId = this.getAttribute("href");
     const targetElement = document.querySelector(targetId);
-    const targetPosition = targetElement.offsetTop - navbar;
+    
+    let targetPosition = targetElement.offsetTop - navbar;
+
+    if (window.innerWidth <= 768) { 
+      targetPosition = targetElement.offsetTop - (navbar + 25);
+    }
 
     window.scrollTo({
       top: targetPosition,
@@ -14,3 +19,24 @@ document.querySelectorAll(".navbar a").forEach((link) => {
     });
   });
 });
+
+const menuButton = document.querySelector(".menu-resp");
+const closeButton = document.querySelector(".fechar-resp");
+const navbarMobile = document.querySelector(".navbar");
+
+menuButton.addEventListener("click", () => {
+  navbarMobile.classList.add("active"); 
+});
+
+
+closeButton.addEventListener("click", () => {
+  navbarMobile.classList.remove("active"); 
+});
+
+
+document.querySelectorAll(".navbar a").forEach((link) => {
+  link.addEventListener("click", function () {
+    navbarMobile.classList.remove("active"); 
+  });
+});
+
