@@ -21,16 +21,16 @@
 📂 Café da Nata/<br>
 │<br>
 ├── 📁 img/<br>
-│   └── 📸 Imagens usadas no site<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📸 Imagens usadas no site<br>
 │<br>
 ├── 📄 index.html<br>
-│   └── Página principal do projeto<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Página principal do projeto<br>
 │<br>
 ├── 🎨 style.css<br>
-│   └── Arquivo de estilos (responsável pela aparência do site)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Arquivo de estilos (responsável pela aparência do site)<br>
 │<br>
 ├── 🖥️ script.js<br>
-│   └── Arquivo de scripts (interações e funcionalidades dinâmicas do site)<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── Arquivo de scripts (interações e funcionalidades dinâmicas do site)<br>
 
 ## Explicação da Estrutura do Projeto
 
